@@ -60,8 +60,10 @@ def update
  end
 
  def self.new_from_db(row)
-    student = self.new(row[0],row[1],row[2])
-    student
+    id = row[0]
+    name = row[1]
+    grade = row[2]
+    new_student = self.new(name, grade, id)
   end
 
 end 
